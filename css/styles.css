@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    min-height: 100vh;
+    margin:0;
+}
+
+img {
+    max-width:  100%;
+}
+
+.quotes {
+	color: white;
+	display: flex;
+}
+
+div > div{
+	margin-left: 50px;
+	margin-top: 50px;
+	border-left: 20px;
+	padding: 50px;
+	width: 300px;
+	height: 300px;
+}
+
+.active{
+	background: pink;
+}
