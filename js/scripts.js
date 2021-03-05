@@ -21,7 +21,7 @@ function Quote(quoteText, author, tags, color) {
 		$(".quotes").prepend(container)
 	}
 }
-
+	//////HELLLLPPPPPPPPPPPPPP
 var quotes = [
 	new Quote('"We don\'t make mistakes, just happy little accidents."-Bob Ross', 
 	"Bob Ross",["painting", "mistakes"], "#0a3410"),
@@ -29,6 +29,7 @@ var quotes = [
  	["courage", "creativity"], "#154175"),
 	new Quote('"There\s nothing wrong with having a tree as a friend"-Bob Ross', "Bob Ross"
 ,["painting", "tree"], "#6E1DA5")]
+	
 
 //global taglist
 var tagList = []

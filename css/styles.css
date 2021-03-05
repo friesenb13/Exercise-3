@@ -11,6 +11,12 @@ img {
     max-width:  100%;
 }
 
+body{
+	color: white;
+	background-color: #FAE1FA;
+	font-size: 15px;
+}
+
 .quotes {
 	color: white;
 	display: flex;
