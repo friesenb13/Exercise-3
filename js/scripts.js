@@ -1,5 +1,5 @@
-function Quote(quoteText, author, tags, color) {
-	this.quote = quoteText; 
+function Quote(imgFile, author, tags, color) {
+	this.imgFile = imgFile; 
 	this.author= author;
 	this.tags= tags;
 	this.color= color;
@@ -14,7 +14,8 @@ function Quote(quoteText, author, tags, color) {
 		container.addClass("quote")
 
 		var quoteString = "";
-		quoteString += "<p>" + this.quote + "</p>";
+		quoteString += "<img src=" + this.imgFile + ">";
+
 		quoteString += "<cite>" + this.author + "</cite";
 
 		container.html(quoteString)
@@ -23,13 +24,16 @@ function Quote(quoteText, author, tags, color) {
 }
 	//////HELLLLPPPPPPPPPPPPPP
 var quotes = [
-	new Quote('"We don\'t make mistakes, just happy little accidents."-Bob Ross', 
-	"Bob Ross",["painting", "mistakes"], "#0a3410"),
-	new Quote ('"Creativity takes courage."- Henry Matisse', "Henry Matisse",
- 	["courage", "creativity"], "#154175"),
-	new Quote('"There\s nothing wrong with having a tree as a friend"-Bob Ross', "Bob Ross"
-,["painting", "tree"], "#6E1DA5")]
-	
+	new Quote("Images/zebra.jpg", 
+	"Bob Ross",["zoo", "zebra", "mammal"], "#0a3410"),
+
+	new Quote ("Images/flamingo.jpg", "Henry Matisse",
+ 	["zoo", "flamingo", "bird"], "#154175"),
+
+	new Quote("Images/penguin.jpg", "Bob Ross"
+,["zoo", "penguin", "bird"], "#6E1DA5")]
+
+
 
 //global taglist
 var tagList = []
