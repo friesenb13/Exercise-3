@@ -25,7 +25,7 @@ function Photo(imgFile, animal, tags, color) {
 }
 var photos = [
 	new Photo("Images/zebra.jpg", 
-	"Penguin",["zoo", "zebra", "mammal"], "#0a3410"),
+	"Zebra",["zoo", "zebra", "mammal"], "#6fde50"),
 
 	new Photo ("Images/flamingo.jpg", "Flamingo",
  	["zoo", "flamingo", "bird"], "#b57491"),
@@ -52,7 +52,7 @@ var photos = [
 ,["zoo", "sheep", "mammal"], "#ffd561"),
 
 	new Photo("Images/gorilla.jpg", "Gorilla"
-,["zoo", "gorilla", "mammal"], "black")
+,["zoo", "gorilla", "mammal"], "#949192")
 
 ]
 

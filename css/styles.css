@@ -12,21 +12,23 @@ img {
 }
 
 body{
-	color: white;
+	color: black;
 	background-color: #FAE1FA;
 	font-size: 15px;
+	text-align: center;
 }
 
 .photos {
-	color: white;
+	font-size: 25px;
+	/*display: inline-flex;*/
 }
 
 
 div > div{
 	margin-left: 50px;
 	margin-top: 50px;
-	border-left: 20px;
-	padding: 30px;
+	margin-right: 50px;
+	padding: 40px;
 	width: 700px;
 	height: 700px;
 }
@@ -34,3 +36,10 @@ div > div{
 .active{
 	background: pink;
 }
+
+
+.buttons{
+	padding:30px;
+	margin-left: 40px;
+}
+
