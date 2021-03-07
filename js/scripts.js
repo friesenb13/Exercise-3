@@ -11,7 +11,7 @@ function Photo(imgFile, animal, tags, color) {
 
 		})
 		container.css("background", this.color)
-		container.addClass(".photos")
+		container.addClass("photo")
 
 		var photoString = "";
 		photoString += "<img src=" + this.imgFile + ">";
@@ -28,28 +28,28 @@ var photos = [
 	"Penguin",["zoo", "zebra", "mammal"], "#0a3410"),
 
 	new Photo ("Images/flamingo.jpg", "Flamingo",
- 	["zoo", "flamingo", "bird"], "#154175"),
+ 	["zoo", "flamingo", "bird"], "#b57491"),
 
 	new Photo("Images/penguin.jpg", "Penguin"
 ,["zoo", "penguin", "bird"], "white"),
 
 	new Photo("Images/bird.jpg", 
-	"Bird",["zoo", "bird"], "yellow"),
+	"Bird",["zoo", "bird"], "#f2dc4b"),
 
 	new Photo ("Images/butterfly1.jpg", "Butterfly",
- 	["zoo", "butterfly", ], "purple"),
+ 	["zoo", "butterfly", ], "#a743e0"),
 
 	new Photo("Images/butterfly2.jpg", "Butterfly"
-,["zoo", "butterfly", ], "black"),
+,["zoo", "butterfly", ], "#f03073"),
 
 	new Photo("Images/giraffe.jpg", 
-	"Giraffe",["zoo", "giraffe", "mammal"], "yellow"),
+	"Giraffe",["zoo", "giraffe", "mammal"], "#e3f030"),
 
 	new Photo ("Images/lion.jpg", "Lion",
- 	["zoo", "lion", "mammal"], "orange"),
+ 	["zoo", "lion", "mammal"], "#d17330"),
 
 	new Photo("Images/sheep.jpg", "Big Horn Sheep"
-,["zoo", "sheep", "mammal"], "blue"),
+,["zoo", "sheep", "mammal"], "#ffd561"),
 
 	new Photo("Images/gorilla.jpg", "Gorilla"
 ,["zoo", "gorilla", "mammal"], "black")
@@ -82,7 +82,7 @@ $(".filter").on("click", function() {
 
 	console.log(tag)
 
-	$(".photos").not("." + tag).hide();
+	$(".photo").not("." + tag).hide();
 
 	$("." + tag).fadeIn();
 
