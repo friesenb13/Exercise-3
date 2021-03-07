@@ -17,18 +17,18 @@ body{
 	font-size: 15px;
 }
 
-.quotes {
+.photos {
 	color: white;
-	display: flex;
 }
+
 
 div > div{
 	margin-left: 50px;
 	margin-top: 50px;
 	border-left: 20px;
-	padding: 50px;
-	width: 300px;
-	height: 300px;
+	padding: 30px;
+	width: 700px;
+	height: 700px;
 }
 
 .active{

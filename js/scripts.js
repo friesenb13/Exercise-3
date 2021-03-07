@@ -1,6 +1,6 @@
-function Quote(imgFile, author, tags, color) {
-	this.imgFile = imgFile; 
-	this.author= author;
+function Photo(imgFile, animal, tags, color) {
+	this.imgFile = imgFile;
+	this.animal= animal;
 	this.tags= tags;
 	this.color= color;
 	this.display= function() {
@@ -8,40 +8,64 @@ function Quote(imgFile, author, tags, color) {
 		var container = $("<div>")
 		this.tags.forEach(function(tag){
 			container.addClass(tag);
-			// $("body").prepend("<button>" + tag + "</button>")
+
 		})
 		container.css("background", this.color)
-		container.addClass("quote")
+		container.addClass(".photos")
 
-		var quoteString = "";
-		quoteString += "<img src=" + this.imgFile + ">";
+		var photoString = "";
+		photoString += "<img src=" + this.imgFile + ">";
 
-		quoteString += "<cite>" + this.author + "</cite";
+		photoString += "<cite>" + this.animal + "</cite";
 
-		container.html(quoteString)
-		$(".quotes").prepend(container)
+		container.html(photoString)
+		$(".photos").prepend(container)
+
 	}
 }
-	//////HELLLLPPPPPPPPPPPPPP
-var quotes = [
-	new Quote("Images/zebra.jpg", 
-	"Bob Ross",["zoo", "zebra", "mammal"], "#0a3410"),
+var photos = [
+	new Photo("Images/zebra.jpg", 
+	"Penguin",["zoo", "zebra", "mammal"], "#0a3410"),
 
-	new Quote ("Images/flamingo.jpg", "Henry Matisse",
+	new Photo ("Images/flamingo.jpg", "Flamingo",
  	["zoo", "flamingo", "bird"], "#154175"),
 
-	new Quote("Images/penguin.jpg", "Bob Ross"
-,["zoo", "penguin", "bird"], "#6E1DA5")]
+	new Photo("Images/penguin.jpg", "Penguin"
+,["zoo", "penguin", "bird"], "white"),
+
+	new Photo("Images/bird.jpg", 
+	"Bird",["zoo", "bird"], "yellow"),
+
+	new Photo ("Images/butterfly1.jpg", "Butterfly",
+ 	["zoo", "butterfly", ], "purple"),
+
+	new Photo("Images/butterfly2.jpg", "Butterfly"
+,["zoo", "butterfly", ], "black"),
+
+	new Photo("Images/giraffe.jpg", 
+	"Giraffe",["zoo", "giraffe", "mammal"], "yellow"),
+
+	new Photo ("Images/lion.jpg", "Lion",
+ 	["zoo", "lion", "mammal"], "orange"),
+
+	new Photo("Images/sheep.jpg", "Big Horn Sheep"
+,["zoo", "sheep", "mammal"], "blue"),
+
+	new Photo("Images/gorilla.jpg", "Gorilla"
+,["zoo", "gorilla", "mammal"], "black")
+
+]
+
 
 
 
 //global taglist
 var tagList = []
 
-quotes.forEach(function(quote){
-	quote.display();
+photos.forEach(function(photo){
+	photo.display();
 //check to see if tag has been added to taglist
-	quote.tags.forEach(function(tag){
+	photo.tags.forEach(function(tag){
 		if(!tagList.includes(tag)){
 			//if it isn't added, add it
 		tagList.push(tag);
@@ -58,7 +82,8 @@ $(".filter").on("click", function() {
 
 	console.log(tag)
 
-	$(".quote").not("." + tag).hide();
+	$(".photos").not("." + tag).hide();
+
 	$("." + tag).fadeIn();
 
 	$(".filter").removeClass("active");
